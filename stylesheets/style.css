@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header nav {
+  width: 100vw;
+  height: 50px;
+}
+header nav .brand-icon h3 {
+  font-size: 30px;
+  font-weight: 400;
+  font-family: "Prompt", sans-serif;
+}
+
+/*# sourceMappingURL=style.css.map */
