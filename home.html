@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./stylesheets/style.css">
+  <link rel="stylesheet" href="./animation/animation.css">
 </head>
 <body>
     <!--- header section --->
@@ -26,7 +27,19 @@
                     <li><a href="">Contact</a></li>
                     <li><a href="">Login</a></li>
                     <li><a href="">About</a></li>
-                    <li id="bar"><i class="fa fa-bars"></i></li>
+                    <!--- responsive --- this is bar --->
+                    <li id="bar">
+                        <i class="fa fa-bars">
+                            <div>
+                                <div class="inner-bar">
+                                    <a href="">Home</a>
+                                    <a href="">Contact</a>
+                                    <a href="">Login</a>
+                                    <a href="">About</a>
+                                </div>
+                            </div>
+                        </i>
+                    </li>
                 </ul>
             </div>
         </nav>
