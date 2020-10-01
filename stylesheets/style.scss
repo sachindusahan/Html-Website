@@ -4,9 +4,15 @@
 $background: #F7F7F7;
 $navigation-background: #383340;
 $blue: #3D58F3;
+$feature-BG1: #F1ECFD;
+$feature-BG2: #E8EFFF;
+$feature-color1: #1E22FF;
+$feature-color2: #2668FF;
 
 body {
     background: $background;
+    background: url("../images/pattern_2.svg");
+    background-repeat: repeat;
 }
 
 * {
@@ -19,7 +25,7 @@ body {
 
 // navigation
 header {
-
+    
     nav {
         display: flex;
         width: 100vw;
@@ -55,7 +61,7 @@ header {
                     a {
                         font-family: 'Montserrat', sans-serif;
                         text-transform: uppercase;
-                        color: #555;
+                        color: #000;
                         letter-spacing: .9px;
                     }
                     
@@ -69,7 +75,8 @@ header {
 }
 
 
-// responsive navigation
+// responsive navigation ...
+
 @media (max-width: 800px) {
     header {
         
@@ -95,30 +102,28 @@ header {
                     #bar {
                         display: block;
                         
-                        i {
+                        .fa-bars {
                             font-size: 24px;
                             
                             div {
-                                display: flex;
+                                display: none;
                                 flex-direction: column;
                                 font-size: 18px;
                                 position: absolute;
-                                background: #F7F7F7;
+                                background: #FFF;
                                 z-index: 2;
                                 right: 0;
                                 width: 100%;
                                 height: 230px;
+                                align-items: center;
+                                justify-content: center;
+                                border-radius: 0 0 0 10px;
                                     
                                 .inner-bar {
                                     width: 100%;
-                                    text-align: center;
                                     
                                     a {
                                         margin: 15px 0;
-                                    }
-                                    
-                                    a:hover {
-                                        border-bottom: none;
                                     }
                                 }
                             }
@@ -130,9 +135,30 @@ header {
     }
 }
 
-// end of max-width 800px media
+// end of max-width 800px media ...
 
-
+// navigation bar hover
+header {
+    
+    nav {
+        
+        .inner-navigation {
+            
+            ul {
+                
+                #bar {
+                    
+                    .fa-bars:hover {
+                        
+                        div {
+                            display: flex;
+                        }
+                    } 
+                }
+            }
+        }
+    }
+}
 
 //hero section
 header {
@@ -143,8 +169,8 @@ header {
             position: relative;
         
             img {
-                background-size: cover;
-                width: 100%;
+                background-size: cover; 
+                z-index: 20;
             }
             
             div {
@@ -156,19 +182,22 @@ header {
                 h1 {
                     font-size: 50px;
                     margin: 0 0 30px 0;   
+                    color: #FFF;
                 }
                 
                 h4 {
                     margin: 5px 0;
                     font-weight: 400;
                     font-size: 25px;
+                    color: #FFF;
                 }
+                
                 button {
                     padding: 15px 20px;
                     outline: none;
                     border: none;
                     border-radius: 4px;
-                    background: #3D58F3;
+                    background: #000;
                     color: #FFF;
                     font-size: 20px;
                     font-weight: 700;
@@ -176,7 +205,170 @@ header {
                     text-transform: capitalize;
                     margin: 5px 0 0 0;
                 }
+                
+	            button:hover {
+	                box-shadow: 0 0 4px #000;
+	            }
             }
         }
     }
 }
+
+// hero media query 
+@media (min-width: 600px) {
+    header {
+    
+        .hero {
+    
+            #inner-hero {
+            
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 599px) {
+    header {
+    
+        .hero {
+            overflow: hidden;
+            #inner-hero {
+            
+                img {
+                    margin-top: -40%;  
+                    margin-left: -80%;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 750px) {
+	header {
+	
+	    .hero {
+	        
+	        #inner-hero {
+	 
+	            div {
+	                
+	                h1 {
+	                    font-size: 30px;
+	                    margin: 0 0 30px 0;   
+	                }
+	               
+	                h4 {
+	                    margin: 5px 0;
+	                    font-weight: 400;
+	                    font-size: 20px;
+	                }
+	                button {
+	                    padding: 12px 16px;
+	                    outline: none;
+	                    border: none;
+	                    border-radius: 4px;
+	                    background: #000;
+	                    color: #FFF;
+	                    font-size: 20px;
+	                    font-weight: 700;
+	                    font-family: 'Raleway', sans-serif;
+	                    text-transform: capitalize;
+	                    margin: 5px 0 0 0;
+	                }
+	            }
+	        }
+	    }
+	}
+}
+// end of hero media query
+
+
+// main 
+
+// Feature plans
+main {
+    h1 {
+            color: #555;
+            font-size: 35px;
+            text-align: center;
+            margin-top: 120px;
+            margin-bottom: 70px;
+            font-family: 'Prompt', sans-serif;
+    }
+    
+    .main-feature {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: flex-start;
+        
+        div {
+            width: 300px; 
+            padding: 10px;
+            border-radius: 5px;
+            
+            span {
+                color: $feature-color2;
+                font-weight: 600;
+            }
+        }
+        
+        #feature1 {
+            background: $feature-BG1;
+            margin: 20px 0;
+        }
+        
+        #feature2,#feature3 {
+            background: $feature-BG2;
+            margin: 20px 0;
+        }
+        
+        #feature2:hover , #feature3:hover {
+            box-shadow: 0 0 10px $feature-BG2;
+        }
+        #feature1:hover {
+            box-shadow: 0 0 10px $feature-BG1;
+        }
+        
+        #feature2 {
+            
+            button {
+                
+                background: $feature-color1;
+                border: none;
+                outline: none;
+                padding: 10px 15px;
+                color: #FFF;
+                margin: 5px 0;
+                border-radius: 8px;
+            }
+            
+            button:hover {
+                box-shadow: 0 0 4px $feature-color1;
+            }
+        }
+    }
+}
+
+// Feature media Query
+@media (max-width: 750px) {
+    main {
+        
+        h1 {
+            font-size: 26px;
+            margin-top: 80px;
+            margin-bottom: 50px;
+        }
+        
+        .main-feature {
+            div {
+                width: 90%;
+            }
+        }
+    }
+}
+// End of feature Plans
+

@@ -1,3 +1,45 @@
+header nav .inner-navigation ul #bar .fa-bars div {
+  animation-name: navigation;
+  animation-duration: 1s;
+}
+header nav .inner-navigation ul #bar .fa-bars div .inner-bar .a {
+  animation-name: link-1;
+  animation-duration: 1s;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+header nav .inner-navigation ul #bar .fa-bars div .inner-bar .b, header nav .inner-navigation ul #bar .fa-bars div .inner-bar .c, header nav .inner-navigation ul #bar .fa-bars div .inner-bar .d {
+  opacity: 0;
+  animation-name: link-2;
+  animation-duration: 1s;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+}
 
+@keyframes navigation {
+  from {
+    height: 20px;
+  }
+  to {
+    height: 230px;
+  }
+}
+@keyframes link-1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes link-2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 
 /*# sourceMappingURL=animation.css.map */

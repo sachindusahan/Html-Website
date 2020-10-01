@@ -1,8 +1,53 @@
 @import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+header nav .inner-navigation ul #bar .fa-bars div {
+  animation-name: navigation;
+  animation-duration: 1s;
+}
+header nav .inner-navigation ul #bar .fa-bars div .inner-bar .a {
+  animation-name: link-1;
+  animation-duration: 1s;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+header nav .inner-navigation ul #bar .fa-bars div .inner-bar .b, header nav .inner-navigation ul #bar .fa-bars div .inner-bar .c, header nav .inner-navigation ul #bar .fa-bars div .inner-bar .d {
+  opacity: 0;
+  animation-name: link-2;
+  animation-duration: 1s;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes navigation {
+  from {
+    height: 20px;
+  }
+  to {
+    height: 230px;
+  }
+}
+@keyframes link-1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes link-2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 body {
   background: #F7F7F7;
+  background: url("../images/pattern_2.svg");
+  background-repeat: repeat;
 }
 
 * {
@@ -43,7 +88,7 @@ header nav .inner-navigation ul li {
 header nav .inner-navigation ul li a {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  color: #555;
+  color: #000;
   letter-spacing: 0.9px;
 }
 header nav .inner-navigation ul li a:hover {
@@ -66,37 +111,40 @@ header nav .inner-navigation ul li a:hover {
   header nav .inner-navigation ul #bar {
     display: block;
   }
-  header nav .inner-navigation ul #bar i {
+  header nav .inner-navigation ul #bar .fa-bars {
     font-size: 24px;
   }
-  header nav .inner-navigation ul #bar i div {
-    display: flex;
+  header nav .inner-navigation ul #bar .fa-bars div {
+    display: none;
     flex-direction: column;
     font-size: 18px;
     position: absolute;
-    background: #F7F7F7;
+    background: #FFF;
     z-index: 2;
     right: 0;
     width: 100%;
     height: 230px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 0 10px;
   }
-  header nav .inner-navigation ul #bar i div .inner-bar {
+  header nav .inner-navigation ul #bar .fa-bars div .inner-bar {
     width: 100%;
-    text-align: center;
   }
-  header nav .inner-navigation ul #bar i div .inner-bar a {
+  header nav .inner-navigation ul #bar .fa-bars div .inner-bar a {
     margin: 15px 0;
   }
-  header nav .inner-navigation ul #bar i div .inner-bar a:hover {
-    border-bottom: none;
-  }
 }
+header nav .inner-navigation ul #bar .fa-bars:hover div {
+  display: flex;
+}
+
 header .hero #inner-hero {
   position: relative;
 }
 header .hero #inner-hero img {
   background-size: cover;
-  width: 100%;
+  z-index: 20;
 }
 header .hero #inner-hero div {
   font-family: "Raleway", sans-serif;
@@ -107,24 +155,128 @@ header .hero #inner-hero div {
 header .hero #inner-hero div h1 {
   font-size: 50px;
   margin: 0 0 30px 0;
+  color: #FFF;
 }
 header .hero #inner-hero div h4 {
   margin: 5px 0;
   font-weight: 400;
   font-size: 25px;
+  color: #FFF;
 }
 header .hero #inner-hero div button {
   padding: 15px 20px;
   outline: none;
   border: none;
   border-radius: 4px;
-  background: #3D58F3;
+  background: #000;
   color: #FFF;
   font-size: 20px;
   font-weight: 700;
   font-family: "Raleway", sans-serif;
   text-transform: capitalize;
   margin: 5px 0 0 0;
+}
+header .hero #inner-hero div button:hover {
+  box-shadow: 0 0 4px #000;
+}
+
+@media (min-width: 600px) {
+  header .hero #inner-hero img {
+    width: 100%;
+  }
+}
+@media (max-width: 599px) {
+  header .hero {
+    overflow: hidden;
+  }
+  header .hero #inner-hero img {
+    margin-top: -40%;
+    margin-left: -80%;
+  }
+}
+@media (max-width: 750px) {
+  header .hero #inner-hero div h1 {
+    font-size: 30px;
+    margin: 0 0 30px 0;
+  }
+  header .hero #inner-hero div h4 {
+    margin: 5px 0;
+    font-weight: 400;
+    font-size: 20px;
+  }
+  header .hero #inner-hero div button {
+    padding: 12px 16px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background: #000;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Raleway", sans-serif;
+    text-transform: capitalize;
+    margin: 5px 0 0 0;
+  }
+}
+main h1 {
+  color: #555;
+  font-size: 35px;
+  text-align: center;
+  margin-top: 120px;
+  margin-bottom: 70px;
+  font-family: "Prompt", sans-serif;
+}
+main .main-feature {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+main .main-feature div {
+  width: 300px;
+  padding: 10px;
+  border-radius: 5px;
+}
+main .main-feature div span {
+  color: #2668FF;
+  font-weight: 600;
+}
+main .main-feature #feature1 {
+  background: #F1ECFD;
+  margin: 20px 0;
+}
+main .main-feature #feature2, main .main-feature #feature3 {
+  background: #E8EFFF;
+  margin: 20px 0;
+}
+main .main-feature #feature2:hover, main .main-feature #feature3:hover {
+  box-shadow: 0 0 10px #E8EFFF;
+}
+main .main-feature #feature1:hover {
+  box-shadow: 0 0 10px #F1ECFD;
+}
+main .main-feature #feature2 button {
+  background: #1E22FF;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  color: #FFF;
+  margin: 5px 0;
+  border-radius: 8px;
+}
+main .main-feature #feature2 button:hover {
+  box-shadow: 0 0 4px #1E22FF;
+}
+
+@media (max-width: 750px) {
+  main h1 {
+    font-size: 26px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+  }
+  main .main-feature div {
+    width: 90%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
