@@ -50,6 +50,23 @@ header nav .inner-navigation ul li a:hover {
   border-bottom: 2px solid #555;
 }
 
+@media (max-width: 800px) {
+  header nav .brand-icon {
+    margin-left: 5px;
+  }
+  header nav .brand-icon h3 {
+    font-size: 24px;
+  }
+  header nav .inner-navigation ul li {
+    display: none;
+  }
+  header nav .inner-navigation ul #bar {
+    display: block;
+  }
+  header nav .inner-navigation ul #bar .fa-bars {
+    font-size: 24px;
+  }
+}
 header .hero #inner-hero {
   position: relative;
 }
