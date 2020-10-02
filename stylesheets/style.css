@@ -228,34 +228,43 @@ main h1 {
 }
 main .main-feature {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: flex-start;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
-main .main-feature div {
-  width: 300px;
-  padding: 10px;
-  border-radius: 5px;
-}
-main .main-feature div span {
+main .main-feature span {
   color: #2668FF;
   font-weight: 600;
 }
-main .main-feature #feature1 {
+main .main-feature #main-block {
+  width: 300px;
+}
+main .main-feature #main-block #feature1 {
   background: #F1ECFD;
-  margin: 20px 0;
+  margin: 0 0 20px 0;
+  padding: 10px;
+  height: 100%;
+  border-radius: 10px;
 }
-main .main-feature #feature2, main .main-feature #feature3 {
+main .main-feature #main-block #feature1:hover {
+  box-shadow: 0 0 5px #F1ECFD;
+}
+main .main-feature #secondery-block {
+  width: 600px;
+}
+main .main-feature #secondery-block .sub-secondary1 {
+  display: flex;
+}
+main .main-feature #secondery-block .sub-secondary1 #feature2, main .main-feature #secondery-block .sub-secondary1 #feature3 {
+  flex: 1;
   background: #E8EFFF;
-  margin: 20px 0;
+  margin: 0 10px 20px 10px;
+  padding: 10px;
+  border-radius: 10px;
 }
-main .main-feature #feature2:hover, main .main-feature #feature3:hover {
-  box-shadow: 0 0 10px #E8EFFF;
+main .main-feature #secondery-block .sub-secondary1 #feature2:hover, main .main-feature #secondery-block .sub-secondary1 #feature3:hover {
+  box-shadow: 0 0 5px #E8EFFF;
 }
-main .main-feature #feature1:hover {
-  box-shadow: 0 0 10px #F1ECFD;
-}
-main .main-feature #feature2 button {
+main .main-feature #secondery-block .sub-secondary1 #feature2 button {
   background: #1E22FF;
   border: none;
   outline: none;
@@ -264,8 +273,20 @@ main .main-feature #feature2 button {
   margin: 5px 0;
   border-radius: 8px;
 }
-main .main-feature #feature2 button:hover {
+main .main-feature #secondery-block .sub-secondary1 #feature2 button:hover {
   box-shadow: 0 0 4px #1E22FF;
+}
+main .main-feature #secondery-block .sub-secondary2 {
+  background: #E8EFFF;
+  margin: 20px 10px 0 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+main .main-feature #secondery-block .sub-secondary2 h4 {
+  text-align: center;
+}
+main .main-feature #secondery-block .sub-secondary2:hover {
+  box-shadow: 0 0 5px #E8EFFF;
 }
 
 @media (max-width: 750px) {
@@ -274,8 +295,40 @@ main .main-feature #feature2 button:hover {
     margin-top: 80px;
     margin-bottom: 50px;
   }
-  main .main-feature div {
-    width: 90%;
+  main .main-feature {
+    display: flex;
+    flex-direction: column;
+  }
+  main .main-feature #main-block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  main .main-feature #main-block #feature1 {
+    margin: 0 20px 20px 20px;
+  }
+  main .main-feature #secondery-block {
+    width: 100%;
+  }
+  main .main-feature #secondery-block .sub-secondary2 {
+    margin: 0 20px 20px 20px;
+  }
+  main .main-feature #secondery-block .sub-secondary1 #feature3 {
+    margin: 0 10px 20px 20px;
+  }
+  main .main-feature #secondery-block .sub-secondary1 #feature2 {
+    margin: 0 20px 20px 10px;
+  }
+}
+@media (max-width: 480px) {
+  main .main-feature #secondery-block .sub-secondary1 {
+    flex-direction: column;
+  }
+  main .main-feature #secondery-block .sub-secondary1 #feature3, main .main-feature #secondery-block .sub-secondary1 #feature2 {
+    margin: 20px;
+  }
+  main .main-feature #secondery-block .sub-secondary2 h4 {
+    text-align: left;
   }
 }
 
