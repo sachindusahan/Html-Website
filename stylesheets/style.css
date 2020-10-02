@@ -331,5 +331,22 @@ main .main-feature #secondery-block .sub-secondary2:hover {
     text-align: left;
   }
 }
+main .center-image {
+  display: flex;
+  justify-content: center;
+  margin: 130px 10px 0 10px;
+}
+main .center-image img {
+  width: 450px;
+}
+
+@media (max-width: 450px) {
+  main .center-image {
+    margin: 80px 20px 0 20px;
+  }
+  main .center-image img {
+    width: 100%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -442,4 +442,27 @@ main {
 }
 // End of feature Plans
 
- 
+
+//  Center image 
+main {
+    .center-image {
+        display: flex;
+        justify-content: center;
+        margin: 130px 10px 0 10px;
+        img {
+            width: 450px;
+        }
+    }
+}
+@media (max-width: 450px) {
+	main {
+	    .center-image {
+	        margin: 80px 20px 0 20px;
+	        img {
+	            width: 100%;
+	        }
+	    }
+	}
+}
+
+// End of center image 
