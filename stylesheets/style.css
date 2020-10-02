@@ -334,7 +334,13 @@ main .main-feature #secondery-block .sub-secondary2:hover {
 main h1 {
   margin-bottom: 10px;
 }
-main button {
+main .center-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .center-image button {
   border: none;
   outline: none;
   border-radius: 5px;
@@ -346,14 +352,8 @@ main button {
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
 }
-main button:hover {
+main .center-image button:hover {
   box-shadow: 0 0 5px #555;
-}
-main .center-image {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 main .center-image img {
   width: 450px;
@@ -380,6 +380,9 @@ main .center-topics {
 main .center-topics div {
   width: 80%;
   text-align: center;
+  displsy: flex;
+  flex-direction: column;
+  align-items: center;
   margin: 50px 0;
   font-family: "Raleway", sans-serif;
 }
