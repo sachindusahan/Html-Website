@@ -445,19 +445,43 @@ main {
 
 //  Center image 
 main {
+    h1 {
+        margin-bottom: 10px;
+    }
+    button {
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        padding: 8px 22px;
+        font-size: 18px;
+        text-transform: uppercase;
+        color: #FFF;
+        background: $feature-color1;
+        font-weight: 700;
+        font-family: 'Montserrat', sans-serif;
+    }
+    button:hover {
+        box-shadow: 0 0 5px #555;
+    }
     .center-image {
         display: flex;
+        flex-direction: column;
+        align-items: center;
         justify-content: center;
-        margin: 130px 10px 0 10px;
         img {
             width: 450px;
+            margin: 50px 10px 0 10px;
         }
     }
 }
-@media (max-width: 450px) {
+@media (max-width: 750px) {
 	main {
+	    h1 {
+            margin-top: 50px;
+            margin-bottom: 10px;
+	    }
 	    .center-image {
-	        margin: 80px 20px 0 20px;
+	        padding: 0 20px;
 	        img {
 	            width: 100%;
 	        }
@@ -466,3 +490,35 @@ main {
 }
 
 // End of center image 
+
+// Center Topics 
+main {
+    .center-topics {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        div {
+            width: 80%;
+            text-align: center;
+            margin: 50px 0;
+            font-family: 'Raleway', sans-serif;
+            img {
+                width: 100px;
+            }
+            h1 {
+                all: unset;
+                display: block;
+                font-size: 28px;
+                margin: 10px 0;
+                span {
+                    text-decoration: underline;
+                    color: purple;
+                }
+            }
+            p {
+                font-size: 18px;
+                color: #787878;
+            }
+        }
+    }
+}
