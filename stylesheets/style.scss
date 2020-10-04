@@ -746,3 +746,49 @@ main {
         opacity: 0.35;
     }
 }
+
+
+// contact form 
+form.contact-form {
+    width: 600px;
+    margin-left: 20px; 
+    flex-direction: column;
+    font-family:"Raleway",sans-serif;
+    h3 {
+        margin-top: 40px;
+        margin-bottom: 15px;
+    }
+    input {
+        width: 100%;
+        height: 40px;
+    }
+    #message {
+         height: 70px;
+    }
+    .btn {
+        width: 100px;
+        height: 40px;
+        border: none;
+        color: #FFF;
+        background: $blue-crayola;
+        border-radius: 5px;
+        font-family:"Raleway",sans-serif;
+        font-weight: bold;
+        margin: 5px 0;
+    }
+}
+@media (max-width: 700px) {
+    form.contact-form {
+        width: 500px;
+    }
+}
+@media (max-width: 600px) {
+    form.contact-form {
+        width: 400px;
+    }
+}
+@media (max-width: 480px) {
+    form.contact-form {
+        width: 320px;
+    }
+}
