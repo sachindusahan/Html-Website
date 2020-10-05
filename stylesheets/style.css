@@ -639,13 +639,14 @@ form.contact-form .btn {
 main footer {
   font-family: "Montserrat", sans-serif;
   margin: 50px 0 0 0;
+  padding-top: 30px;
   background-color: #383340;
   color: #FFF;
   display: flex;
   flex-direction: column;
 }
 main footer div .contacts, main footer div .company, main footer div .pages {
-  margin: 10px;
+  margin: 20px 10px;
 }
 main footer div .contacts h4, main footer div .company h4, main footer div .pages h4 {
   color: #797979;
@@ -653,7 +654,32 @@ main footer div .contacts h4, main footer div .company h4, main footer div .page
 }
 main footer div .subscribe h6 {
   color: #797979;
+  margin-bottom: 20px;
   font-size: 12px;
+}
+main footer div .subscribe .email {
+  margin-bottom: 20px;
+}
+main footer div .subscribe .email button {
+  border: none;
+  outline: none;
+  height: 30.2px;
+  padding: 0 10px;
+  color: #FFF;
+  font-weight: bold;
+  background: #256effff;
+}
+main footer div .subscribe .email input {
+  height: 30px;
+}
+main footer div .subscribe .contact-icons i {
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 50%;
+}
+main footer div .subscribe .contact-icons i:hover {
+  background: #256effff;
+  transition: background 3s;
 }
 main footer .breake-2, main footer .breake-1 {
   display: flex;
@@ -664,6 +690,21 @@ main footer .breake-1 .pages, main footer .breake-1 .company {
 }
 main footer .breake-2 .contacts, main footer .breake-2 .subscribe {
   flex: 1;
+}
+main footer .copyright {
+  padding: 10px 0 10px 10px;
+}
+
+@media (max-width: 500px) {
+  main footer {
+    padding: 20px 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  main footer .breake-2, main footer .breake-1 {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
