@@ -636,5 +636,34 @@ form.contact-form .btn {
     width: 320px;
   }
 }
+main footer {
+  font-family: "Montserrat", sans-serif;
+  margin: 50px 0 0 0;
+  background-color: #383340;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+}
+main footer div .contacts, main footer div .company, main footer div .pages {
+  margin: 10px;
+}
+main footer div .contacts h4, main footer div .company h4, main footer div .pages h4 {
+  color: #797979;
+  font-size: 15px;
+}
+main footer div .subscribe h6 {
+  color: #797979;
+  font-size: 12px;
+}
+main footer .breake-2, main footer .breake-1 {
+  display: flex;
+  flex: 1;
+}
+main footer .breake-1 .pages, main footer .breake-1 .company {
+  flex: 1;
+}
+main footer .breake-2 .contacts, main footer .breake-2 .subscribe {
+  flex: 1;
+}
 
 /*# sourceMappingURL=style.css.map */

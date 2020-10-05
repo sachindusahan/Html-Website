@@ -792,3 +792,44 @@ form.contact-form {
         width: 320px;
     }
 }
+
+// Footer 
+main {
+    footer {
+        font-family: 'Montserrat', sans-serif;
+        margin: 50px 0 0 0;
+        div {
+            .contacts,.company,.pages {
+                margin: 10px;
+                h4 {
+                    color: #797979;
+                    font-size: 15px;
+                }
+            }
+            .subscribe {
+                h6 {
+                    color: #797979;
+                    font-size: 12px;
+                }
+            }
+        }
+        background-color: #383340;
+        color: #FFF;
+        display: flex;
+        flex-direction: column;
+        .breake-2,.breake-1 {
+            display: flex;
+            flex: 1;
+        }
+        .breake-1 {
+             .pages,.company {
+                 flex: 1;
+             }
+        }
+        .breake-2 {
+             .contacts,.subscribe {
+                 flex: 1;
+             }
+        }
+    }
+}
