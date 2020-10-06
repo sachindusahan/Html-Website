@@ -1,0 +1,710 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+header nav .inner-navigation ul #bar .fa-bars div {
+  animation-name: navigation;
+  animation-duration: 1s;
+}
+header nav .inner-navigation ul #bar .fa-bars div .inner-bar .a {
+  animation-name: link-1;
+  animation-duration: 1s;
+  animation-delay: 0.7s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+header nav .inner-navigation ul #bar .fa-bars div .inner-bar .b, header nav .inner-navigation ul #bar .fa-bars div .inner-bar .c, header nav .inner-navigation ul #bar .fa-bars div .inner-bar .d {
+  opacity: 0;
+  animation-name: link-2;
+  animation-duration: 1s;
+  animation-delay: 0.6s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes navigation {
+  from {
+    height: 20px;
+  }
+  to {
+    height: 230px;
+  }
+}
+@keyframes link-1 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes link-2 {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+body {
+  background: #F7F7F7;
+  background: url("../images/pattern_2.svg");
+  background-repeat: repeat;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+header nav {
+  display: flex;
+  width: 100vw;
+  min-height: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav .brand-icon {
+  margin-left: 30px;
+}
+header nav .brand-icon h3 {
+  font-size: 33px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: "Prompt", sans-serif;
+  color: #000;
+}
+header nav .inner-navigation ul {
+  display: flex;
+  margin-right: 30px;
+}
+header nav .inner-navigation ul #bar {
+  display: none;
+}
+header nav .inner-navigation ul li {
+  margin: 0 15px;
+}
+header nav .inner-navigation ul li a {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: #000;
+  letter-spacing: 0.9px;
+}
+header nav .inner-navigation ul li a:hover {
+  border-bottom: 2px solid #555;
+}
+
+@media (max-width: 800px) {
+  header nav .brand-icon {
+    margin-left: 10px;
+  }
+  header nav .brand-icon h3 {
+    font-size: 24px;
+  }
+  header nav .inner-navigation ul {
+    margin-right: 10px;
+  }
+  header nav .inner-navigation ul li {
+    display: none;
+  }
+  header nav .inner-navigation ul #bar {
+    display: block;
+  }
+  header nav .inner-navigation ul #bar .fa-bars {
+    font-size: 24px;
+  }
+  header nav .inner-navigation ul #bar .fa-bars div {
+    display: none;
+    flex-direction: column;
+    font-size: 18px;
+    position: absolute;
+    background: #FFF;
+    z-index: 2;
+    right: 0;
+    width: 100%;
+    height: 230px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 0 10px;
+  }
+  header nav .inner-navigation ul #bar .fa-bars div .inner-bar {
+    width: 100%;
+  }
+  header nav .inner-navigation ul #bar .fa-bars div .inner-bar a {
+    margin: 15px 0;
+  }
+}
+header nav .inner-navigation ul #bar .fa-bars:hover div {
+  display: flex;
+}
+
+header .hero #inner-hero {
+  position: relative;
+}
+header .hero #inner-hero img {
+  background-size: cover;
+  z-index: 20;
+  position: relative;
+  z-index: -10;
+}
+header .hero #inner-hero div {
+  font-family: "Raleway", sans-serif;
+  position: absolute;
+  top: 90px;
+  left: 30px;
+  padding: 20px;
+}
+header .hero #inner-hero div .empty-div {
+  background: #000;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.39;
+  z-index: -5;
+}
+header .hero #inner-hero div h1 {
+  font-size: 50px;
+  margin: 0 0 30px 0;
+  color: #FFF;
+}
+header .hero #inner-hero div h4 {
+  margin: 5px 0;
+  font-weight: 400;
+  font-size: 25px;
+  color: #FFF;
+}
+header .hero #inner-hero div button {
+  padding: 15px 20px;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  background: #256effff;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+  text-transform: capitalize;
+  margin: 5px 0 0 0;
+}
+header .hero #inner-hero div button:hover {
+  box-shadow: 0 0 4px #256effff;
+}
+
+@media (min-width: 700px) {
+  header .hero #inner-hero img {
+    width: 100%;
+  }
+}
+@media (max-width: 699px) {
+  header .hero {
+    overflow: hidden;
+  }
+  header .hero #inner-hero img {
+    height: 600px;
+  }
+}
+@media (max-width: 750px) {
+  header .hero #inner-hero div h1 {
+    font-size: 30px;
+    margin: 0 0 30px 0;
+  }
+  header .hero #inner-hero div h4 {
+    margin: 5px 0;
+    font-weight: 400;
+    font-size: 20px;
+  }
+  header .hero #inner-hero div button {
+    padding: 12px 16px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background: #000;
+    color: #FFF;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: "Raleway", sans-serif;
+    text-transform: capitalize;
+    margin: 5px 0 0 0;
+  }
+}
+main h1 {
+  color: #555;
+  font-size: 35px;
+  text-align: center;
+  margin-top: 120px;
+  margin-bottom: 70px;
+  font-family: "Prompt", sans-serif;
+}
+main .main-feature {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+main .main-feature span {
+  color: #2668FF;
+  font-weight: 600;
+}
+main .main-feature #main-block {
+  width: 300px;
+}
+main .main-feature #main-block #feature1 {
+  background: #F1ECFD;
+  margin: 0 0 20px 0;
+  padding: 10px;
+  height: 100%;
+  border-radius: 10px;
+}
+main .main-feature #main-block #feature1:hover {
+  box-shadow: 0 0 5px #F1ECFD;
+}
+main .main-feature #secondery-block {
+  width: 600px;
+}
+main .main-feature #secondery-block .sub-secondary1 {
+  display: flex;
+}
+main .main-feature #secondery-block .sub-secondary1 #feature2, main .main-feature #secondery-block .sub-secondary1 #feature3 {
+  flex: 1;
+  background: #E8EFFF;
+  margin: 0 10px 20px 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+main .main-feature #secondery-block .sub-secondary1 #feature2:hover, main .main-feature #secondery-block .sub-secondary1 #feature3:hover {
+  box-shadow: 0 0 5px #E8EFFF;
+}
+main .main-feature #secondery-block .sub-secondary1 #feature2 button {
+  background: #1E22FF;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  color: #FFF;
+  margin: 5px 0;
+  border-radius: 8px;
+}
+main .main-feature #secondery-block .sub-secondary1 #feature2 button:hover {
+  box-shadow: 0 0 4px #1E22FF;
+}
+main .main-feature #secondery-block .sub-secondary2 {
+  background: #E8EFFF;
+  margin: 20px 10px 0 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+main .main-feature #secondery-block .sub-secondary2 h4 {
+  text-align: center;
+}
+main .main-feature #secondery-block .sub-secondary2:hover {
+  box-shadow: 0 0 5px #E8EFFF;
+}
+
+@media (max-width: 750px) {
+  main h1 {
+    font-size: 26px;
+    margin-top: 80px;
+    margin-bottom: 50px;
+  }
+  main .main-feature {
+    display: flex;
+    flex-direction: column;
+  }
+  main .main-feature #main-block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  main .main-feature #main-block #feature1 {
+    margin: 0 20px 20px 20px;
+  }
+  main .main-feature #secondery-block {
+    width: 100%;
+  }
+  main .main-feature #secondery-block .sub-secondary2 {
+    margin: 0 20px 20px 20px;
+  }
+  main .main-feature #secondery-block .sub-secondary1 #feature3 {
+    margin: 0 10px 20px 20px;
+  }
+  main .main-feature #secondery-block .sub-secondary1 #feature2 {
+    margin: 0 20px 20px 10px;
+  }
+}
+@media (max-width: 480px) {
+  main .main-feature #secondery-block .sub-secondary1 {
+    flex-direction: column;
+  }
+  main .main-feature #secondery-block .sub-secondary1 #feature3, main .main-feature #secondery-block .sub-secondary1 #feature2 {
+    margin: 20px;
+  }
+  main .main-feature #secondery-block .sub-secondary2 h4 {
+    text-align: left;
+  }
+}
+main h1 {
+  margin-bottom: 10px;
+}
+main .center-image {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .center-image button {
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 8px 22px;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #FFF;
+  background: #1E22FF;
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
+}
+main .center-image button:hover {
+  box-shadow: 0 0 5px #555;
+}
+main .center-image img {
+  width: 450px;
+  margin: 50px 10px 0 10px;
+}
+
+@media (max-width: 750px) {
+  main h1 {
+    margin-top: 50px;
+    margin-bottom: 10px;
+  }
+  main .center-image {
+    padding: 0 20px;
+  }
+  main .center-image img {
+    width: 100%;
+  }
+}
+main .center-topics {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .center-topics div {
+  width: 80%;
+  text-align: center;
+  displsy: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+  font-family: "Raleway", sans-serif;
+}
+main .center-topics div img {
+  width: 100px;
+}
+main .center-topics div h1 {
+  all: unset;
+  display: block;
+  font-size: 28px;
+  margin: 10px 0;
+}
+main .center-topics div p {
+  font-size: 18px;
+  color: #787878;
+}
+
+.paragraphs1 {
+  margin-top: 50px;
+}
+.paragraphs1 h2, .paragraphs1 h3, .paragraphs1 ul, .paragraphs1 p {
+  margin-left: 20px;
+  font-family: "Raleway", sans-serif;
+}
+.paragraphs1 h3 {
+  color: #555;
+  font-weight: 500;
+  text-decotation: underline;
+}
+.paragraphs1 ul li {
+  list-style-type: circle;
+  margin-left: 30px;
+  font-size: 15px;
+}
+.paragraphs1 p {
+  line-height: 1.5em;
+  font-size: 14px;
+  margin: 20px 0 0 20px;
+}
+
+.paragraphs2 {
+  margin-top: 50px;
+}
+.paragraphs2 h2, .paragraphs2 h3, .paragraphs2 p {
+  margin-left: 20px;
+  font-family: "Raleway", sans-serif;
+}
+.paragraphs2 h3 {
+  color: #555;
+  font-weight: 500;
+  text-decotation: underline;
+}
+.paragraphs2 p {
+  line-height: 1.5em;
+  font-size: 14px;
+  margin: 20px 0 0 20px;
+}
+
+.paragraphs3 {
+  margin-top: 50px;
+}
+.paragraphs3 h2, .paragraphs3 p {
+  margin-left: 20px;
+  font-family: "Raleway", sans-serif;
+}
+.paragraphs3 p {
+  line-height: 1.5em;
+  font-size: 14px;
+  margin: 20px 0 0 20px;
+}
+
+.client {
+  margin: 50px 20px;
+}
+.client h2 {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.client .inner-clients {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.client .inner-clients img {
+  width: 80px;
+  margin: 30px 30px;
+}
+
+.usefull-tool-and-links {
+  margin: 50px 20px 50px 20px;
+}
+.usefull-tool-and-links h2, .usefull-tool-and-links h3 {
+  font-family: "Raleway", sans-serif;
+  text-align: center;
+  margin: 10px 0;
+}
+.usefull-tool-and-links h2 {
+  font-size: 35px;
+  font-weight: bold;
+  color: #FF6666;
+}
+.usefull-tool-and-links h3 {
+  color: #787878;
+}
+.usefull-tool-and-links .inner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.usefull-tool-and-links .inner div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 20px;
+  padding: 15px;
+  font-family: "Prompt", sans-serif;
+  width: 400px;
+}
+.usefull-tool-and-links .inner div a {
+  color: #555;
+}
+.usefull-tool-and-links .inner div h4 {
+  margin: 10px;
+}
+.usefull-tool-and-links .inner div:hover {
+  background: #FFF;
+  box-shadow: 0 0 8px #555;
+  border-radius: 5px;
+}
+
+@media (min-width: 800px) {
+  .last-image img {
+    width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .last-image {
+    overflow: hidden;
+  }
+  .last-image img {
+    margin-left: -60%;
+    height: 800px;
+  }
+}
+@media (max-width: 480px) {
+  .last-image {
+    overflow: hidden;
+  }
+  .last-image img {
+    margin-left: -80%;
+    height: 600px;
+  }
+  .last-image .paragraph h3 {
+    font-size: 35px;
+    margin-bottom: 15px;
+  }
+  .last-image .paragraph button {
+    margin: 20px 0;
+  }
+}
+.last-image {
+  font-family: "Prompt", sans-serif;
+  position: relative;
+}
+.last-image .paragraph {
+  position: absolute;
+  top: 120px;
+  left: 20px;
+  z-index: 10;
+  color: #FFF;
+}
+.last-image .paragraph h3 {
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+.last-image .paragraph button {
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: #FFF;
+  background: #3D58F3;
+  font-family: "Prompt", sans-serif;
+  margin: 25px 0;
+}
+.last-image .empty-div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  top: 0;
+  opacity: 0.35;
+}
+
+form.contact-form {
+  width: 600px;
+  margin-left: 20px;
+  flex-direction: column;
+  font-family: "Raleway", sans-serif;
+}
+form.contact-form h3 {
+  margin-top: 40px;
+  margin-bottom: 15px;
+}
+form.contact-form input {
+  width: 100%;
+  height: 40px;
+}
+form.contact-form #message {
+  height: 70px;
+}
+form.contact-form .btn {
+  width: 100px;
+  height: 40px;
+  border: none;
+  color: #FFF;
+  background: #256effff;
+  border-radius: 5px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+@media (max-width: 700px) {
+  form.contact-form {
+    width: 500px;
+  }
+}
+@media (max-width: 600px) {
+  form.contact-form {
+    width: 400px;
+  }
+}
+@media (max-width: 480px) {
+  form.contact-form {
+    width: 320px;
+  }
+}
+main footer {
+  font-family: "Montserrat", sans-serif;
+  margin: 50px 0 0 0;
+  padding-top: 30px;
+  background-color: #383340;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+}
+main footer div .contacts, main footer div .company, main footer div .pages {
+  margin: 20px 10px;
+}
+main footer div .contacts h4, main footer div .company h4, main footer div .pages h4 {
+  color: #797979;
+  font-size: 15px;
+}
+main footer div .subscribe h6 {
+  color: #797979;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+main footer div .subscribe .email {
+  margin-bottom: 20px;
+}
+main footer div .subscribe .email button {
+  border: none;
+  outline: none;
+  height: 30.2px;
+  padding: 0 10px;
+  color: #FFF;
+  font-weight: bold;
+  background: #256effff;
+}
+main footer div .subscribe .email input {
+  height: 30px;
+}
+main footer div .subscribe .contact-icons i {
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 50%;
+}
+main footer div .subscribe .contact-icons i:hover {
+  background: #256effff;
+  transition: background 3s;
+}
+main footer .breake-2, main footer .breake-1 {
+  display: flex;
+  flex: 1;
+}
+main footer .breake-1 .pages, main footer .breake-1 .company {
+  flex: 1;
+}
+main footer .breake-2 .contacts, main footer .breake-2 .subscribe {
+  flex: 1;
+}
+main footer .copyright {
+  padding: 10px 0 10px 10px;
+}
+
+@media (max-width: 500px) {
+  main footer {
+    padding: 20px 0 20px 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  main footer .breake-2, main footer .breake-1 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
